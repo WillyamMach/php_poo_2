@@ -7,10 +7,7 @@ class Titulo {
         public readonly int $anoLancamento,
         public readonly Genero $genero,
            ) {
-        $this->nome = $nome;
-        $this->anoLancamento = $anoLancamento;
-        $this->genero = $genero;
-        $this->notas = [];
+
     }
 
     public function avalia(float $nota) {
@@ -21,5 +18,9 @@ class Titulo {
         $somaDasNotas = array_sum($this->notas);
         $quantidadeNotas = count($this->notas);
         return $somaDasNotas / $quantidadeNotas;
+    }
+
+    public function duracaoEmMinutos(): int {
+        return 0;
     }
 }
